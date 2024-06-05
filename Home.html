@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <meta
+      name="keywords"
+      content="Android mobile application development, Android Apps development, Android mobile app development company, Android mobile app design company iOS App Development, iPhone App Development Company, App development company in Chandigarh"
+    />
+    <meta
+      name="description"
+      content="Omninos is a Google certified software development company providing custom, offshore software, mobile app, web Portal application development services in India."
+    />
+    <link
+      rel="shortcut icon"
+      href="./images/bg-images copy 2.png"
+      type="image/x-icon"
+    />
+    <title>
+      Omninos Solutions | Software ,Web, Mobile App Development Company
+    </title>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+        user-select: none;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        border-radius: 0px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #673ab7;
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #660ab6;
+        border-radius: 5px;
+      }
+
+      .bg-custom-img {
+        color: white;
+        background: url("./images/index-banner2.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        line-height: 3rem;
+      }
+      .btn-1 {
+        transition: transform 0.8s;
+      }
+      .nav-1 > li {
+        cursor: pointer;
+      }
+      .nav-1 li {
+        transition: text-decoration 0.5s;
+      }
+      .nav-1 > li:hover {
+        text-decoration: underline;
+        text-decoration-color: white;
+      }
+
+      .btn-1:hover {
+        transform: scale(1.1);
+      }
+
+      .con-3 {
+        display: grid;
+        place-content: center;
+      }
+      .con-3 .con-3-inner {
+        overflow: hidden;
+      }
+      .con-3 .con-3-inner img {
+        /* box-shadow: -22px -22px 0px #683ab7, 22px 22px 0px #9a28b0; */
+        margin: 2rem auto;
+        transition: transform 5s;
+      }
+
+      .con-3 .con-3-inner img::after {
+        position: absolute;
+        top: 0;
+        left: -10px;
+        z-index: -1;
+        width: 150px;
+        height: 150px;
+        background-color: #673ab7;
+      }
+      .con-3 .con-3-inner img:nth-child(n):hover {
+        transform: scale(0.9);
+        animation: scale 50ms alternate;
+      }
+      .shake_hand:hover {
+        animation: s 5s alternate;
+      }
+      @keyframes s {
+        from {
+          transform: scale(0.9);
+        }
+        to {
+          transform: scale(1.1);
+        }
+      }
+
+      @keyframes scale {
+        50% {
+          transform: scale(0.9);
+        }
+      }
+      @media only screen and (min-width: 995px) {
+        .con-3-inner {
+          display: grid;
+          width: fit-content;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 2rem;
+          justify-content: space-between;
+          align-items: center;
+          margin: 2rem 1rem;
+          padding: 2rem;
+          color: white;
+          border-radius: 5px 25px;
+          background: linear-gradient(-45deg, #673ab7, #9a28b0);
+        }
+        .services {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 2rem 1rem;
+          padding: 1rem 2rem;
+          margin: 1rem 2rem;
+        }
+      }
+      @media only screen and (max-width: 994px) {
+        .services {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2rem 1rem;
+          padding: 1rem 2rem;
+          margin: 1rem 2rem;
+        }
+      }
+      @media only screen and (max-width: 765px) {
+        .con-3-inner {
+          display: grid;
+          width: fit-content;
+          grid-template-columns: repeat(1, 1fr);
+          /* gap: 2rem; */
+          place-content: center;
+          margin: 2rem auto;
+          padding: 2rem;
+          color: white;
+          border-radius: 5px 25px;
+          background: linear-gradient(-45deg, #673ab7, #9a28b0);
+        }
+        .con-3 img {
+          margin: auto;
+        }
+
+        .services {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+          padding: 1rem 2rem;
+          margin: 1.25rem 2rem;
+        }
+      }
+      @media only screen and(min-width:570px) {
+        .services {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+          padding: 1rem 2rem;
+          margin: 1.25rem 2rem;
+        }
+      }
+      @media only screen and(max-width:569px) {
+        .services {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 1rem;
+          padding: 1rem 2rem;
+          margin: 1.25rem 2rem;
+        }
+      }
+      .sidebar {
+        position: fixed;
+        z-index: 2;
+        top: 35%;
+        left: 0%;
+        display: grid;
+        place-content: center;
+        /* border: solid 2px white; */
+      }
+      .sidebar a {
+        position: relative;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        padding: 0.25rem;
+        overflow: hidden;
+        text-decoration: none;
+        color: black;
+      }
+      .sidebar a:nth-child(1) {
+        background-color: #29a71a;
+      }
+      .sidebar a:nth-child(2) {
+        background-color: #03a9f4;
+      }
+      .sidebar a:nth-child(3) {
+        background-color: #105b9d;
+      }
+      .sidebar a img {
+        height: 45px;
+        border-radius: 1rem;
+        transition: transform 1s;
+      }
+      .sidebar a img:hover {
+        transform: scale(1.2) rotate(360deg);
+      }
+
+      .App-1 {
+        position: relative;
+        z-index: 1;
+        /* top: 15px; */
+        left: -32px;
+        /* padding: 5px; */
+        border-radius: 50%;
+        transition: transform 1s linear;
+        background-color: white;
+      }
+      .services > div:hover:nth-child(1) {
+        background-color: #deefde;
+      }
+      .services > div:hover:nth-child(2) {
+        background-color: #dee3f2;
+      }
+      .services > div:hover:nth-child(3) {
+        background-color: #cdd3ff;
+      }
+      .services > div:hover:nth-child(4) {
+        background-color: #d1d1d1;
+      }
+      .services > div:hover:nth-child(5) {
+        background-color: #fef6d0;
+      }
+      .services > div:hover:nth-child(6) {
+        background-color: #fedaeb;
+      }
+      .services > div:hover:nth-child(7) {
+        background-color: #dce9fe;
+      }
+      .services > div:hover:nth-child(8) {
+        background-color: #c3c6db;
+      }
+      .services .App-1:hover {
+        transform: rotate(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="sidebar">
+      <a href="https://web.whatsapp.com/" target="_parent">
+        <img src="./images/whatsapp.png" alt="" />
+      </a>
+      <a href="https://twitter.com/i/flow/login" target="_parent">
+        <img src="./images/twitter.png" alt="" />
+      </a>
+      <a href="https://twitter.com/i/flow/login" target="_parent">
+        <img
+          width="40"
+          height="50"
+          src="https://img.icons8.com/fluency/48/facebook.png"
+          alt="facebook"
+        />
+      </a>
+      <a
+        href="#"
+        target="_parent"
+        style="background-color: #3e3e3e; padding: 12px; color: white"
+      >
+        <div style="writing-mode: vertical-lr">Quick Contact</div>
+      </a>
+    </nav>
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary sticky-top"
+      style="background: linear-gradient(to right, #683ab7, #9a28b0)"
+    >
+      <div class="container-fluid p-auto">
+        <a class="navbar-brand mx-auto" href="#">
+          <img
+            src="./images/logo-2.png"
+            alt="Logo"
+            width="100%"
+            height="35"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <a class="nav-link active text-light mx-3" aria-current="page" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="30px"
+            viewBox="0 -960 960 960"
+            width="30px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+            />
+          </svg>
+        </a>
+        <button
+          class="navbar-toggler btn btn-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse mx-auto"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto nav-1">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-light"
+                aria-current="page"
+                href="#"
+              >
+                Home
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Our Products
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li><a class="dropdown-item text-light" href="#">Action</a></li>
+                <li>
+                  <a class="dropdown-item text-light" href="#"
+                    >Another action</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-light" href="#"
+                    >Something else here</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li><a class="dropdown-item text-light" href="#">Action</a></li>
+                <li>
+                  <a class="dropdown-item text-light" href="#">
+                    Another action
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-light" href="#">
+                    Something else here
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Softwares
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li><a class="dropdown-item text-light" href="#">Action</a></li>
+                <li>
+                  <a class="dropdown-item text-light" href="#"
+                    >Another action</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-light" href="#"
+                    >Something else here</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Hire Developers
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li><a class="dropdown-item text-light" href="#">Action</a></li>
+                <li>
+                  <a class="dropdown-item text-light" href="#"
+                    >Another action</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-light" href="#"
+                    >Something else here</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Solutions
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li><a class="dropdown-item text-light" href="#">Action</a></li>
+                <li>
+                  <ax class="dropdown-item text-light" href="#"
+                    >Another action</ax
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-light" href="#"
+                    >Something else here</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About Us
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li><a class="dropdown-item text-light" href="#">Action</a></li>
+                <li>
+                  <a class="dropdown-item text-light" href="#">
+                    Another action
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-light" href="#">
+                    Something else here
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active text-light"
+                aria-current="page"
+                href="#"
+              >
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="bg-custom-img">
+      <div
+        class="container-fluid d-grid p-3 d-grid justify-content-center align-items-center"
+        style="background-color: hsla(0, 0%, 0%, 0.8)"
+      >
+        <img
+          src="./images/logo-2.png"
+          class="rounded mx-auto d-block mt-5 mb-3"
+          alt="logo"
+          width=""
+          height="40px"
+        />
+        <p
+          class="text-center text-uppercase"
+          style="font-size: calc(12px + 2.5vw); font-weight: bold"
+        >
+          Omninos Solutions
+        </p>
+        <p
+          class="text-center text-uppercase"
+          style="font-size: calc(12px + 2.5vw); font-weight: bold"
+        >
+          Mobile App Development Company
+        </p>
+        <p class="text-center py-3 fs-4">
+          50+ apps done by Top Notch App Dev Company! Next can be your's
+        </p>
+        <div class="d-flex my-3 p-3 justify-content-center">
+          <div
+            class="btn text-light mx-5 my-auto p-3 btn-1 d-flex justify-content-center align-items-center"
+            style="
+              border-radius: 30px 0px;
+              background: linear-gradient(45deg, #683ab7, #9a28b0);
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M320-240h60v-80h80v-60h-80v-80h-60v80h-80v60h80v80Zm200-30h200v-60H520v60Zm0-100h200v-60H520v60Zm44-152 56-56 56 56 42-42-56-58 56-56-42-42-56 56-56-56-42 42 56 56-56 58 42 42Zm-314-70h200v-60H250v60Zm-50 472q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"
+              />
+            </svg>
+            Calculate the price
+          </div>
+          <div
+            class="btn text-light mx-5 my-auto p-3 btn-1 d-flex justify-content-center align-items-center"
+            style="
+              border-radius: 30px 0px;
+              background: linear-gradient(45deg, #683ab7, #9a28b0);
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"
+              />
+            </svg>
+            Get Started today
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container p-2">
+      <p
+        class="fs-2 text-center fw-bold p-3"
+        style="text-decoration: underline"
+      >
+        About-us
+      </p>
+      <p class="container fs-6 text-center">
+        OMNINOS is a top Mobile App Development Company with over 500+
+        successful projects under its belt. Our mobile app developer team has
+        rich industry experience and in-depth technical expertise to develop
+        business-centric B2B as well as B2C mobile apps that help enterprises to
+        stay ahead in the market. App design, develop, test and launch the
+        mobile apps that deliver consistent value at every step of the mobile
+        app development lifecycle.
+      </p>
+      <br />
+      <p class="container fs-6 text-center">
+        Our focus is building digital products that gain interaction and
+        succeed. If you've got the vision for a high-value product, we’d like to
+        start a conversation and convey your ideas to life. Blue-chip brands and
+        new startup ventures trust Utility to style and engineer award-winning
+        iOS, Android and Web applications that get attention and resound . We
+        believe in creating value for our customers. We identify their audience
+        , prospects, budget, and schedules.
+      </p>
+    </div>
+    <div class="container con-3 p-3">
+      <div class="con-3-inner">
+        <div class="content">
+          <p class="fs-3" style="text-decoration: underline">Web-Designing</p>
+          Motivates action that is, and that’s what you want your customers to
+          be – motivated to make an enquiry on your products and services.
+          That’s what websites are supposed to be; organic living things that
+          are continuously churning out fresh content and used as a marketing
+          tool for your business. A website is quite just a portal of data ,
+          it’s the frontline for your first impressions. You would think a
+          company Web package is the most elementary bundle, but we deliver
+          quite just the bare bones. Our services have made positive differences
+          in all kinds of businesses, whether it’s through a website revamp for
+          established companies or a fresh web design for startups. At Omninos
+          we strive for an unparalleled experience with our ingeniously crafted
+          web page design, not just flat and overly simple websites that act as
+          pass-throughs.
+        </div>
+        <img src="./images/webdesigning.jpg" alt="" class="img-fluid" />
+      </div>
+      <div class="con-3-inner">
+        <img src="./images/androiddev.jpg" alt="" class="img-fluid" />
+        <div class="content">
+          <p class="fs-3" style="text-decoration: underline">
+            Android Development
+          </p>
+          Omninos is a leading Android app development company and known all
+          over the world of its superior quality services.Omninos offers a full
+          range of highly innovative and out of the box Android app development
+          supported Android platform that help business to reinforce their
+          marketing strategy and in acquiring a sizable amount of consumers
+          within the market. As an established Android mobile app development
+          company, we help the customers increase visibility, improve agility,
+          and add innovation to their offerings for the target market through
+          the mobile application.Our offshore app development team excels in the
+          development of interactive, feature-packed, and high-functioning
+          applications. We manage a multi-thread work environment with a team of
+          proficient designers, developers, engineers, business analysts &amp;
+          architects.
+        </div>
+      </div>
+      <div class="con-3-inner">
+        <div>
+          <p class="fs-3" style="text-decoration: underline; color: white">
+            Php Development
+          </p>
+          Constructing a website from scratch is no mean feat. It involves
+          quality traffic, awesome designs and compelling content; getting your
+          customers and clients to remain takes quite just putting two and two
+          together. Lucky for you, our experienced website developers and
+          designers know just how to do it. With two stock banks and two
+          assigned designers for every project, we make sure that our clients
+          get a spread of designs to settle on from – and that’s rare for other
+          web agencies! Furthermore, our use of CMS, no yearly fees for content
+          adding, and therefore the extremely easy to use interface allows for
+          updating capabilities anywhere, anytime.
+        </div>
+        <img src="./images/phpdev.jpg" alt="" class="img-fluid" />
+      </div>
+      <div class="con-3-inner">
+        <img src="./images/iphonedev.jpg" alt="" class="img-fluid" />
+        <div>
+          <p class="fs-3" style="text-decoration: underline">
+            iPhone Development
+          </p>
+
+          Our iPhone app development services are backed by an amazingly
+          talented team of iOS developers who are experts in working with Apple
+          and Mac exclusive technologies. Our brilliant designer team is reputed
+          in the mobile app industry for designing outstanding UI designs with a
+          minimalist approach that is perfectly suited for iPhone devices. Want
+          us to design the UI/UX of your iPhone app? Hire our iPhone app
+          designers now and get your app designed from us. We assure you to
+          design any type of iOS app that is interactive and easy-to-access for
+          your app users. We provide customized app development for iOS to meet
+          our client’s specifications and business requirements. By
+          understanding the user interface functionalities we customize your app
+          with top features.
+        </div>
+      </div>
+      <div class="con-3-inner">
+        <div>
+          <p class="fs-3" style="text-decoration: underline">
+            Graphic Designing
+          </p>
+          At Omninos, we’ll take care of all your needs. We’re proud to have
+          some of the highest caliber writers and graphic designers on our team.
+          Our award-winning writers and experienced graphic designers are as
+          attentive as they are creative, and they’re dedicated to making your
+          vision come to life. We create quality, original content relevant to
+          your industry with a fresh voice and compelling conceptual messaging.
+          Blog posts are a critical, low-cost, tool both for building your
+          inbound marketing efforts and for boosting your SEO indexing rate and
+          page rank on search engines. Content and visual branding are two of
+          the most important elements in online branding for your website or
+          business. Whatever you need, our content writers and graphic designers
+          are here to guide you and deliver results.
+        </div>
+        <img src="./images/graphicdesign.jpg" alt="" class="img-fluid" />
+      </div>
+    </div>
+    <span
+      class="message-icon"
+      style="
+        background-color: #03a9f4;
+        width: 62px;
+        display: flex;
+        height: 25px;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 1rem;
+        position: fixed;
+        z-index: 2;
+        bottom: 5%;
+        left: 8%;
+        border-radius: 50%;
+      "
+    >
+      <!-- <i class="fa-thin fa-message"></i> -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+        fill="white"
+      >
+        <path
+          d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h96v80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64z"
+        />
+      </svg>
+    </span>
+    <div
+      style="
+        position: fixed;
+        z-index: 2;
+        bottom: 15%;
+        right: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      "
+    >
+      <span
+        class="p-3 position-relative; my-auto me-3 shake_hand"
+        style="background-color: white; border-radius: 12px"
+        >Chat With Us 👋</span
+      >
+      <span
+        class="message-icon"
+        style="
+          background: linear-gradient(135deg, #c530b7, #df3594);
+          width: 62px;
+          display: flex;
+          height: 25px;
+          justify-content: center;
+          align-items: center;
+          padding: 2rem 1rem;
+          border-radius: 50%;
+        "
+      >
+        <i
+          class="material-icons type1 for-closed active"
+          style="color: rgb(255, 255, 255)"
+          ><svg
+            id="ic_bubble"
+            fill="#FFFFFF"
+            height="32"
+            viewBox="0 0 24 24"
+            width="32"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"
+            ></path>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+          </svg>
+        </i>
+      </span>
+    </div>
+    <div class="services">
+      <div
+        class="box p-2 mx-4 d-flex justify-content-center align-items-center"
+        style="border: solid 2pt #4caf50; border-radius: 15px"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="50"
+          height="50"
+          class="App-1"
+          viewBox="0,0,256,256"
+        >
+          <g
+            fill="#4caf50"
+            fill-rule="nonzero"
+            stroke="none"
+            stroke-width="1"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="10"
+            stroke-dasharray=""
+            stroke-dashoffset="0"
+            font-family="none"
+            font-weight="none"
+            font-size="none"
+            text-anchor="none"
+            style="mix-blend-mode: normal"
+          >
+            <g transform="scale(5.33333,5.33333)">
+              <path
+                d="M12,29c0,1.1 -0.9,2 -2,2c-1.1,0 -2,-0.9 -2,-2v-9c0,-1.1 0.9,-2 2,-2c1.1,0 2,0.9 2,2zM40,29c0,1.1 -0.9,2 -2,2c-1.1,0 -2,-0.9 -2,-2v-9c0,-1.1 0.9,-2 2,-2c1.1,0 2,0.9 2,2zM22,40c0,1.1 -0.9,2 -2,2c-1.1,0 -2,-0.9 -2,-2v-9c0,-1.1 0.9,-2 2,-2c1.1,0 2,0.9 2,2zM30,40c0,1.1 -0.9,2 -2,2c-1.1,0 -2,-0.9 -2,-2v-9c0,-1.1 0.9,-2 2,-2c1.1,0 2,0.9 2,2z"
+              ></path>
+              <path
+                d="M14,18v15c0,1.1 0.9,2 2,2h16c1.1,0 2,-0.9 2,-2v-15zM24,8c-6,0 -9.7,3.6 -10,8h20c-0.3,-4.4 -4,-8 -10,-8zM20,13.6c-0.6,0 -1,-0.4 -1,-1c0,-0.6 0.4,-1 1,-1c0.6,0 1,0.4 1,1c0,0.5 -0.4,1 -1,1zM28,13.6c-0.6,0 -1,-0.4 -1,-1c0,-0.6 0.4,-1 1,-1c0.6,0 1,0.4 1,1c0,0.5 -0.4,1 -1,1z"
+              ></path>
+              <path
+                d="M28.3,10.5c-0.2,0 -0.4,-0.1 -0.6,-0.2c-0.5,-0.3 -0.6,-0.9 -0.3,-1.4l1.7,-2.5c0.3,-0.5 0.9,-0.6 1.4,-0.3c0.5,0.3 0.6,0.9 0.3,1.4l-1.7,2.5c-0.1,0.3 -0.4,0.5 -0.8,0.5zM19.3,10.1c-0.3,0 -0.7,-0.2 -0.8,-0.5l-1.3,-2.1c-0.3,-0.5 -0.2,-1.1 0.3,-1.4c0.5,-0.3 1.1,-0.2 1.4,0.3l1.3,2.1c0.3,0.5 0.2,1.1 -0.3,1.4c-0.2,0.1 -0.4,0.2 -0.6,0.2z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+        <p class="position-relative z-1 p-2 fw-bold m-auto">
+          Andriod App Development
+        </p>
+      </div>
+      <div
+        class="box p-2 mx-4 d-flex justify-content-center align-items-center"
+        style="border: solid 2pt #8f9ed1; border-radius: 15px"
+      >
+        <svg
+          width="50px"
+          height="50px"
+          class="App-1"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="16" cy="16" r="14" fill="#8892BF" />
+          <path
+            d="M14.4392 10H16.1192L15.6444 12.5242H17.154C17.9819 12.5419 18.5986 12.7269 19.0045 13.0793C19.4184 13.4316 19.5402 14.1014 19.3698 15.0881L18.5541 19.4889H16.8497L17.6288 15.2863C17.7099 14.8457 17.6856 14.533 17.5558 14.348C17.426 14.163 17.146 14.0705 16.7158 14.0705L15.3644 14.0573L14.3661 19.4889H12.6861L14.4392 10Z"
+            fill="white"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M6.74092 12.5243H10.0036C10.9612 12.533 11.6552 12.8327 12.0854 13.4229C12.5156 14.0132 12.6576 14.8193 12.5115 15.8414C12.4548 16.3085 12.3289 16.7665 12.1341 17.2159C11.9474 17.6652 11.6878 18.0704 11.355 18.4317C10.9491 18.8898 10.5149 19.1805 10.0523 19.304C9.58969 19.4274 9.11076 19.489 8.61575 19.489H7.15484L6.69222 22H5L6.74092 12.5243ZM7.43485 17.9956L8.16287 14.0441H8.40879C8.49815 14.0441 8.5914 14.0396 8.6888 14.0309C9.33817 14.0221 9.87774 14.0882 10.308 14.2291C10.7462 14.37 10.8923 14.9031 10.7462 15.8282C10.5678 16.9296 10.2186 17.5727 9.69926 17.7577C9.1799 17.934 8.53053 18.0176 7.75138 18.0088H7.58094C7.53224 18.0088 7.48355 18.0043 7.43485 17.9956Z"
+            fill="white"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M24.4365 12.5243H21.1738L19.4329 22H21.1251L21.5878 19.489H23.0487C23.5437 19.489 24.0226 19.4274 24.4852 19.304C24.9479 19.1805 25.382 18.8898 25.7879 18.4317C26.1207 18.0704 26.3803 17.6652 26.567 17.2159C26.7618 16.7665 26.8877 16.3085 26.9444 15.8414C27.0905 14.8193 26.9486 14.0132 26.5183 13.4229C26.0881 12.8327 25.3942 12.533 24.4365 12.5243ZM22.5958 14.0441L21.8678 17.9956C21.9165 18.0043 21.9652 18.0088 22.0139 18.0088H22.1843C22.9635 18.0176 23.6128 17.934 24.1322 17.7577C24.6515 17.5727 25.0007 16.9296 25.1792 15.8282C25.3253 14.9031 25.1792 14.37 24.7409 14.2291C24.3107 14.0882 23.7711 14.0221 23.1217 14.0309C23.0243 14.0396 22.9311 14.0441 22.8417 14.0441H22.5958Z"
+            fill="white"
+          />
+        </svg>
+        <p class="position-relative z-1 p-2 fw-bold m-auto">
+          Php Web Development
+        </p>
+      </div>
+
+      <div
+        class="box p-2 mx-4 d-flex justify-content-center align-items-center"
+        style="border: solid 2pt #4d60ff; border-radius: 15px"
+      >
+        <img src="./images/website.png" alt="" class="App-1" width="50px" />
+        <p class="position-relative z-1 p-2 fw-bold m-auto">
+          Website Designing
+        </p>
+      </div>
+
+      <div
+        class="box p-2 mx-4 d-flex justify-content-center align-items-center"
+        style="border: solid 2pt #000000; border-radius: 15px"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="50"
+          height="50"
+          class="App-1"
+          viewBox="0 0 50 50"
+        >
+          <path
+            d="M 44.527344 34.75 C 43.449219 37.144531 42.929688 38.214844 41.542969 40.328125 C 39.601563 43.28125 36.863281 46.96875 33.480469 46.992188 C 30.46875 47.019531 29.691406 45.027344 25.601563 45.0625 C 21.515625 45.082031 20.664063 47.03125 17.648438 47 C 14.261719 46.96875 11.671875 43.648438 9.730469 40.699219 C 4.300781 32.429688 3.726563 22.734375 7.082031 17.578125 C 9.457031 13.921875 13.210938 11.773438 16.738281 11.773438 C 20.332031 11.773438 22.589844 13.746094 25.558594 13.746094 C 28.441406 13.746094 30.195313 11.769531 34.351563 11.769531 C 37.492188 11.769531 40.8125 13.480469 43.1875 16.433594 C 35.421875 20.691406 36.683594 31.78125 44.527344 34.75 Z M 31.195313 8.46875 C 32.707031 6.527344 33.855469 3.789063 33.4375 1 C 30.972656 1.167969 28.089844 2.742188 26.40625 4.78125 C 24.878906 6.640625 23.613281 9.398438 24.105469 12.066406 C 26.796875 12.152344 29.582031 10.546875 31.195313 8.46875 Z"
+          ></path>
+        </svg>
+        <p class="position-relative z-1 p-2 fw-bold m-auto">
+          IOS App Development
+        </p>
+      </div>
+      <div
+        class="box p-2 mx-4 d-flex justify-content-center align-items-center"
+        style="border: solid 2pt #fef6d0; border-radius: 15px"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          class="App-1"
+        >
+          <path
+            fill="#0277BD"
+            d="M24.047,5c-1.555,0.005-2.633,0.142-3.936,0.367c-3.848,0.67-4.549,2.077-4.549,4.67V14h9v2H15.22h-4.35c-2.636,0-4.943,1.242-5.674,4.219c-0.826,3.417-0.863,5.557,0,9.125C5.851,32.005,7.294,34,9.931,34h3.632v-5.104c0-2.966,2.686-5.896,5.764-5.896h7.236c2.523,0,5-1.862,5-4.377v-8.586c0-2.439-1.759-4.263-4.218-4.672C27.406,5.359,25.589,4.994,24.047,5z M19.063,9c0.821,0,1.5,0.677,1.5,1.502c0,0.833-0.679,1.498-1.5,1.498c-0.837,0-1.5-0.664-1.5-1.498C17.563,9.68,18.226,9,19.063,9z"
+          ></path>
+          <path
+            fill="#FFC107"
+            d="M23.078,43c1.555-0.005,2.633-0.142,3.936-0.367c3.848-0.67,4.549-2.077,4.549-4.67V34h-9v-2h9.343h4.35c2.636,0,4.943-1.242,5.674-4.219c0.826-3.417,0.863-5.557,0-9.125C41.274,15.995,39.831,14,37.194,14h-3.632v5.104c0,2.966-2.686,5.896-5.764,5.896h-7.236c-2.523,0-5,1.862-5,4.377v8.586c0,2.439,1.759,4.263,4.218,4.672C19.719,42.641,21.536,43.006,23.078,43z M28.063,39c-0.821,0-1.5-0.677-1.5-1.502c0-0.833,0.679-1.498,1.5-1.498c0.837,0,1.5,0.664,1.5,1.498C29.563,38.32,28.899,39,28.063,39z"
+          ></path>
+        </svg>
+        <p class="position-relative z-1 p-2 fw-bold m-auto">
+          Python Web Development
+        </p>
+      </div>
+      <div
+        class="box p-2 mx-4 d-flex justify-content-center align-items-lg-start"
+        style="border: solid 2pt #fa6eb0; border-radius: 15px"
+      >
+        <img src="./images/Paint.png" alt="" class="App-1" width="45px" />
+        <p class="position-relative z-1 p-2 fw-bold m-auto">UX/UI Design</p>
+      </div>
+      <div
+        class="box p-2 mx-4 d-flex justify-content-center align-items-center"
+        style="border: solid 2pt #6fa5fb; border-radius: 15px"
+      >
+        <img src="./images/IT.png" alt="" class="App-1" width="50px" />
+        <p class="position-relative z-1 p-2 fw-bold m-auto">IT Consultant</p>
+      </div>
+      <div
+        class="box p-2 mx-4 d-flex justify-content-center align-items-center"
+        style="border: solid 2pt #242e7a; border-radius: 15px"
+      >
+        <img src="./images/software.png" alt="" class="App-1" width="50px" />
+        <p class="position-relative z-1 p-2 fw-bold m-auto">
+          Software Development
+        </p>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
